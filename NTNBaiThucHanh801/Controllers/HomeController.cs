@@ -12,14 +12,20 @@ namespace NTNBaiThucHanh801.Controllers
         {
             return View();
         }
-
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "";
 
             return View();
         }
+        [HttpPost]
+        public ActionResult About(string Massinhvien, string Hotensinhvien)
+        {
+            ViewBag.Message = Massinhvien + "" + Hotensinhvien ;
 
+            return View();
+        }
+        
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
